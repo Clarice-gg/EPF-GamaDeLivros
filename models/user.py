@@ -6,12 +6,12 @@ from typing import List
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 
 class User:
-    def __init__(self, id, name, email, birthdate):
+    def __init__(self, id, name, email, birthdate, books):
         self.id = id
         self.name = name
         self.email = email
         self.birthdate = birthdate
-        self.books = 10
+        self.books = books
 
 
     def __repr__(self):

@@ -2,7 +2,7 @@
 
 <section class="users-section">
     <div class="section-header">
-        <h1 class="section-title"><i class="fas fa-users"></i> Gestão de Usuários</h1>
+        <h1 class="section-title"><i class="fas fa-users"></i> Lista de Usuários</h1>
         <a href="/users/add" class="btn btn-primary">
             <i class="fas fa-plus"></i> Novo Usuário
         </a>
@@ -17,6 +17,7 @@
                     <th>Nome</th>
                     <th>Email</th>
                     <th>Data Nasc.</th>
+                    <th>Livros</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -24,12 +25,13 @@
             <tbody>
                 % for u in users:
                 <tr>
-                    <td>{{u.id}}</td>
-                    <td>{{u.name}}</td>
-                    <td><a href="mailto:{{u.email}}">{{u.email}}</a></td>
-                    <td>{{u.birthdate}}</td>
+                    <td style="padding: 10px;">{{u.id}}</td>
+                    <td style="padding: 10px;">{{u.name}}</td>
+                    <td style="padding: 10px;"><a href="mailto:{{u.email}}">{{u.email}}</a></td>
+                    <td style="padding: 10px;">{{u.birthdate}}</td>
+                    <td style="padding: 20px;">{{u.books}}</td>
                     
-                    <td class="actions">
+                    <td style="padding: 20px;" class="actions">
                         <a href="/users/edit/{{u.id}}" class="btn btn-sm btn-edit">
                             <i class="fas fa-edit"></i> Editar
                         </a>

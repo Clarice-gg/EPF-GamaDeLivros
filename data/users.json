@@ -1,8 +1,16 @@
 [
     {
         "id": 1,
-        "name": "UsuÃ¡rio Teste",
+        "name": "Usuario Teste",
         "email": "uduarioteste@email.com",
-        "birthdate": "1999-10-21"
+        "birthdate": "1999-10-21",
+        "books": 10
+    },
+    {
+        "id": 2,
+        "name": "teste",
+        "email": "aleatorio@email.com",
+        "birthdate": "2010-10-10",
+        "books": 10
     }
 ]

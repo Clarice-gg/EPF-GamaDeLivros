@@ -11,11 +11,12 @@ class User:
         self.name = name
         self.email = email
         self.birthdate = birthdate
+        self.books = 10
 
 
     def __repr__(self):
         return (f"User(id={self.id}, name='{self.name}', email='{self.email}', "
-                f"birthdate='{self.birthdate}'")
+                f"birthdate='{self.birthdate}', books='{self.books}'")
 
 
     def to_dict(self):
@@ -23,7 +24,8 @@ class User:
             'id': self.id,
             'name': self.name,
             'email': self.email,
-            'birthdate': self.birthdate
+            'birthdate': self.birthdate,
+            'books': self.books
         }
 
 
@@ -33,7 +35,8 @@ class User:
             id=data['id'],
             name=data['name'],
             email=data['email'],
-            birthdate=data['birthdate']
+            birthdate=data['birthdate'],
+            books=data['books']
         )
 
 

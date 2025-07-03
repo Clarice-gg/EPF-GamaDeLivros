@@ -14,8 +14,8 @@ class LivroController(BaseController):
     def setup_routes(self):
         self.app.route('/books', method='GET', callback=self.list_books)
         self.app.route('/books/add', method=['GET', 'POST'], callback=self.add_book)
-        self.app.route('/books/edit/<book_id:int>', method=['GET', 'POST'], callback=self.edit_user)
-        self.app.route('/books/delete/<book_id:int>', method='POST', callback=self.delete_user)
+        self.app.route('/books/edit/<book_id:int>', method=['GET', 'POST'], callback=self.edit_book)
+        self.app.route('/books/delete/<book_id:int>', method='POST', callback=self.delete_book)
 
 
     def list_books(self):

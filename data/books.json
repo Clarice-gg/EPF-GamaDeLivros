@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "id": 1,
+        "name": "livro 1",
+        "author": "autor qualquer",
+        "pages": "90",
+        "stock": "20"
+    }
+]

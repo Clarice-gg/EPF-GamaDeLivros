@@ -16,7 +16,7 @@
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Autor</th>
-                    <th>Paginas.</th>
+                    <th>Paginas</th>
                     <th>Quantidade</th>
                     <th>Ações</th>
                 </tr>
@@ -28,8 +28,8 @@
                     <td style="padding: 10px;">{{u.id}}</td>
                     <td style="padding: 10px;">{{u.name}}</td>
                     <td style="padding: 10px;">{{u.author}}</td>
-                    <td style="padding: 10px;">{{u.pages}}</td>
-                    <td style="padding: 20px;">{{u.stock}}</td>
+                    <td style="padding: 20px;">{{u.pages}}</td>
+                    <td style="padding: 30px;">{{u.stock}}</td>
 
                     <td style="padding: 20px;" class="actions">
                         <a href="/books/edit/{{u.id}}" class="btn btn-sm btn-edit">

@@ -1,10 +1,16 @@
 %rebase('layout', title='Livros')
 
-<section class="users-section">
-    <div class="section-header">
+<section class="books-section">
+    <div class="section-header" style="text-align: center;">
         <h1 class="section-title"><i class="fas fa-users"></i> Lista de Livros</h1>
         <a href="/books/add" class="btn btn-primary">
             <i class="fas fa-plus"></i> Novo Livro
+        </a>
+    </div>
+
+    <div class="section-header" style="text-align: center;">
+        <a href="/users">
+            <button>Retornar para a aba usuários</button>
         </a>
     </div>
 
@@ -23,6 +29,7 @@
             </thead>
 
             <tbody>
+                
                 % for u in books:
                 <tr>
                     <td style="padding: 10px;">{{u.id}}</td>

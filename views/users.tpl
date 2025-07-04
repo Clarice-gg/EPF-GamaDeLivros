@@ -1,10 +1,16 @@
 %rebase('layout', title='Usuários')
 
 <section class="users-section">
-    <div class="section-header">
+    <div class="section-header" style="text-align: center;">
         <h1 class="section-title"><i class="fas fa-users"></i> Lista de Usuários</h1>
         <a href="/users/add" class="btn btn-primary">
             <i class="fas fa-plus"></i> Novo Usuário
+        </a>
+    </div>
+
+    <div class="section-header" style="text-align: center;">
+        <a href="/books">
+            <button>Acessar lista de livros</button>
         </a>
     </div>
 

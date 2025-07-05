@@ -16,8 +16,8 @@ class BaseController:
 
 
     def home_redirect(self):
-        """Redireciona a rota raiz para /users"""
-        return self.redirect('/users')
+        """Abre o site na página inicial"""
+        return self.render('home_page')
 
 
     def helper(self):

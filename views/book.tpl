@@ -23,7 +23,7 @@
                     <th>Nome</th>
                     <th>Autor</th>
                     <th>Paginas</th>
-                    <th>Quantidade</th>
+                    <th style="padding-left: 15px;">Quantidade</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -32,13 +32,13 @@
                 
                 % for u in books:
                 <tr>
-                    <td style="padding: 10px;">{{u.id}}</td>
-                    <td style="padding: 10px;">{{u.name}}</td>
-                    <td style="padding: 10px;">{{u.author}}</td>
-                    <td style="padding: 20px;">{{u.pages}}</td>
-                    <td style="padding: 30px;">{{u.stock}}</td>
+                    <td style="padding: 10px; text-align: center;">{{u.id}}</td>
+                    <td style="padding: 10px; text-align: center;">{{u.name}}</td>
+                    <td style="padding: 10px; text-align: center;">{{u.author}}</td>
+                    <td style="padding: 10px; text-align: center;">{{u.pages}}</td>
+                    <td style="padding: 10px; text-align: center;">{{u.stock}}</td>
 
-                    <td style="padding: 20px;" class="actions">
+                    <td style="padding: 10px;" class="actions">
                         <a href="/books/edit/{{u.id}}" class="btn btn-sm btn-edit">
                             <i class="fas fa-edit"></i> Editar
                         </a>

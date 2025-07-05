@@ -8,12 +8,12 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container" style="max-width: fit-content; margin-top: 30px; margin-bottom: 40px; margin-align: center;">
         {{!base}}  <!-- O conteúdo das páginas filhas virá aqui -->
     </div>
 
     <footer>
-        <p>&copy; 2025, Meu Projeto. Todos os direitos reservados.</p>
+        <p style="text-align: center;">&copy; 2025, Meu Projeto. Todos os direitos reservados.</p>
     </footer>
 
     <!-- Scripts JS no final do body -->

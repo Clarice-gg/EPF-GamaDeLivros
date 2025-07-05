@@ -35,9 +35,9 @@
                     <td style="padding: 10px;">{{u.name}}</td>
                     <td style="padding: 10px;"><a href="mailto:{{u.email}}">{{u.email}}</a></td>
                     <td style="padding: 10px;">{{u.birthdate}}</td>
-                    <td style="padding: 20px;">{{u.books}}</td>
+                    <td style="padding: 10px; text-align: center;">{{u.books}}</td>
                     
-                    <td style="padding: 20px;" class="actions">
+                    <td style="padding: 10px;" class="actions">
                         <a href="/users/edit/{{u.id}}" class="btn btn-sm btn-edit">
                             <i class="fas fa-edit"></i> Editar
                         </a>

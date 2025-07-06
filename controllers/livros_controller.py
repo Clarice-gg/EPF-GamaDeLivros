@@ -1,6 +1,9 @@
-from bottle import Bottle, request
+from bottle import Bottle, request, template
 from .base_controller import BaseController
 from services.livros_service import LivroService
+from models.relationship import (registrar_escolha_livro, remover_livro_usuario, livros_do_usuario)
+from models.livros import carregar_livros
+
 
 class LivroController(BaseController):
     def __init__(self, app):
@@ -16,6 +19,9 @@ class LivroController(BaseController):
         self.app.route('/books/add', method=['GET', 'POST'], callback=self.add_book)
         self.app.route('/books/edit/<book_id:int>', method=['GET', 'POST'], callback=self.edit_book)
         self.app.route('/books/delete/<book_id:int>', method='POST', callback=self.delete_book)
+        self.app.route('/users/<user_id:int>/books', method='GET', callback=self.mostrar_livros)
+        self.app.route('/users/<user_id:int>/books/<book_id:int>/escolher', method='POST', callback=self.escolher_livro)
+        self.app.route('/users/<user_id:int>/books/<book_id:int>/remover', method='POST', callback=self.remover_livro)
 
 
     def list_books(self):
@@ -48,6 +54,29 @@ class LivroController(BaseController):
     def delete_book(self, book_id):
         self.book_service.delete_book(book_id)
         self.redirect('/books')
+
+    
+    def mostrar_livros(self, user_id):
+        books = carregar_livros()
+        ids_escolhidos = livros_do_usuario(user_id)
+        livros_escolhidos = [b for b in books if b['id'] in ids_escolhidos]
+        livros_disponiveis = [b for b in books if b['id'] not in ids_escolhidos]
+
+    # Tá dando erro aqui -------- revisar ---------
+        return self.render('livros.tpl',
+                        user_id = user_id,
+                        livros_escolhidos = livros_escolhidos,
+                        livros_disponiveis = livros_disponiveis,
+                        action=f"/users/{user_id}/books")
+    
+
+    def escolher_livro(self, user_id, book_id):
+        registrar_escolha_livro(user_id, book_id)
+        self.redirect('/users/{user_id}/books')
+
+    def remover_livro(self, user_id, book_id):
+        remover_livro_usuario(user_id, book_id)
+        self. redirect('/users/{user_id}/books')
 
 
 book_routes = Bottle()

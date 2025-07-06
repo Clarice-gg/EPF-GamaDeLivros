@@ -46,6 +46,8 @@
                             <i class="fas fa-edit"></i> Editar dados
                         </a>
 
+                        <a href="/users/{{u.id}}/books">Ver livros</a>
+
                         <form action="/users/delete/{{u.id}}" method="post" 
                               onsubmit="return confirm('Tem certeza?')">
                             <button type="submit" class="btn btn-sm btn-danger">

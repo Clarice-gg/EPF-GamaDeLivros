@@ -84,3 +84,8 @@ class LivroModel:
     def delete_book(self, book_id: int):
         self.books = [b for b in self.books if b.id != book_id]
         self._save()
+
+def carregar_livros():
+    with open('data/books.json') as f:
+        return json.load(f)
+

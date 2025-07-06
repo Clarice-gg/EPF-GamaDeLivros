@@ -88,3 +88,8 @@ class UserModel:
     def get_user_name(self, user_name: str):
         return next((u for u in self.users if u.name == user_name), None)
     
+    
+def carregar_users():
+    with open('data/users.json') as f:
+        return json.load(f)
+    

@@ -45,6 +45,16 @@ class UserController(BaseController):
             self.redirect('/users')
 
 
+    # Ainda em teste ----- lista de livros para cada usuário
+    def enter_user(self, user_name):
+        user = self.user_service.get_user_name(user_name)
+        if not user:
+            return "Usuário não encontrado"
+        
+        if request.method == 'GET':
+            return self.render('user_list')
+
+
     def delete_user(self, user_id):
         self.user_service.delete_user(user_id)
         self.redirect('/users')

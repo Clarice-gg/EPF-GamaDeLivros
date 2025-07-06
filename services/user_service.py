@@ -18,13 +18,15 @@ class UserService:
         email = request.forms.get('email')
         birthdate = request.forms.get('birthdate')
 
-        user = User(id=new_id, name=name, email=email, birthdate=birthdate)
+        user = User(id=new_id, name=name, email=email, birthdate=birthdate, books=0)
         self.user_model.add_user(user)
 
 
     def get_by_id(self, user_id):
         return self.user_model.get_by_id(user_id)
 
+    def get_user_name(self, user_name):
+        return self.user_model.get_user_name(user_name)
 
     def edit_user(self, user):
         name = request.forms.get('name')

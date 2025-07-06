@@ -55,13 +55,13 @@
         <h4>Como gostaria de acessar a biblioteca?</h4>
     </div>
 
-    <div class="table-container" style="max-width: fit-content;">
+    <div class="table-container" style="padding-left: 585px; padding-top: 20px;">
         <table class="styled-table">
 
             <thead>
                 <tr>
-                    <th>Usuário</th>
-                    <th style="padding-left: 50px;">Administrador</th>
+                    <th style="font-size: 20px;">Usuário</th>
+                    <th style="padding-left: 50px; font-size: 20px;">Administrador</th>
                 </tr>
             </thead>
 

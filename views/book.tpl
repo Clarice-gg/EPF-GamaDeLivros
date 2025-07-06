@@ -12,6 +12,10 @@
         <a href="/users">
             <button>Retornar para a aba usuários</button>
         </a>
+
+        <a href="/" style="padding-left: 20px;">
+            <button>Voltar ao início</button>
+        </a>
     </div>
 
     <div class="table-container">

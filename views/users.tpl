@@ -12,6 +12,10 @@
         <a href="/books">
             <button>Acessar lista de livros</button>
         </a>
+
+        <a href="/" style="padding-left: 20px;">
+            <button>Voltar ao início</button>
+        </a>
     </div>
 
     <div class="table-container">
@@ -39,7 +43,7 @@
                     
                     <td style="padding: 10px;" class="actions">
                         <a href="/users/edit/{{u.id}}" class="btn btn-sm btn-edit">
-                            <i class="fas fa-edit"></i> Editar
+                            <i class="fas fa-edit"></i> Editar dados
                         </a>
 
                         <form action="/users/delete/{{u.id}}" method="post" 

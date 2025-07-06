@@ -5,5 +5,12 @@
         "author": "autor qualquer",
         "pages": "90",
         "stock": "20"
+    },
+    {
+        "id": 2,
+        "name": "livro 2",
+        "author": "outra pessoa",
+        "pages": "95",
+        "stock": "30"
     }
 ]

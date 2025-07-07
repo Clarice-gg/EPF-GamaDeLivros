@@ -98,6 +98,7 @@ python main.py
 
 ## ✍️ Diagrama de Classes
 
+![Captura de tela 2025-07-07 115009](https://github.com/user-attachments/assets/c08d535c-3bc2-42b1-b1ab-4d334c3b8b55)
 
 ---
 

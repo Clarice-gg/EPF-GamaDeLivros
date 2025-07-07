@@ -26,7 +26,7 @@
             color:rgb(30, 31, 32);
         }
         button {
-            background-color:rgb(127, 202, 130)
+            background-color:rgb(92, 65, 38)
         }
         section {
             margin-bottom: 20px;
@@ -34,7 +34,7 @@
         .comment {
             background-color: #f8f8f8;
             padding: 10px;
-            border-bottom: 4px solid #4CAF50;
+            border-bottom: 4px solid rgb(92, 65, 38);
             margin-bottom: 10px;
             font-style: italic;
         }
@@ -70,12 +70,12 @@
                 <tr>
                     <td style="padding: 10px; text-align: center;">
                         <a href="/users">
-                            <button>Acessar</button>
+                            <button style="color: white;">Acessar</button>
                         </a>
                     </td>
                     <td style="padding: 10px; padding-left:50px; text-align: center;">
                         <a href="/books">
-                            <button>Acessar</button>
+                            <button style="color: white;">Acessar</button>
                         </a>
                     </td>
                 </tr>

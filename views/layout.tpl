@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/style.css" />
     <style>
     body {
-        background-image: url("https://media.istockphoto.com/id/1151849228/pt/vetorial/library-book.jpg?s=612x612&w=0&k=20&c=VweoOrjwNqI-B8eUL2bpK59PNBVKSCC6hoh2Mt6sCfQ=");
+        background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -21,7 +21,7 @@
     </div>
 
     <footer>
-        <p class ="textofinal" style="text-align: center;">&copy; 2025, Meu Projeto. Todos os direitos reservados.</p>
+        <p class ="textofinal" style="text-align: center; color: white;">&copy; 2025, Meu Projeto. Todos os direitos reservados.</p>
     </footer>
 
     <!-- Scripts JS no final do body -->

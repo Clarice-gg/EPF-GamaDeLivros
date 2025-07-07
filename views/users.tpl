@@ -1,13 +1,5 @@
 %rebase('layout', title='Usuários')
 
-<style>
-    body {
-        background-image: url("./static\img\library.jpg");
-        background-size: cover;
-        background-position: center;
-    }
-</style>
-
 <section class="users-section">
     <div class="section-header" style="text-align: center;">
         <h1 class="section-title"><i class="fas fa-users"></i> Lista de Usuários</h1>

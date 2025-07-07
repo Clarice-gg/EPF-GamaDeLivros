@@ -5,12 +5,5 @@
         "email": "uduarioteste@email.com",
         "birthdate": "2000-10-21",
         "books": 0
-    },
-    {
-        "id": 2,
-        "name": "teste",
-        "email": "aleatorio@email.com",
-        "birthdate": "2010-10-10",
-        "books": 0
     }
 ]

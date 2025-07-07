@@ -1,6 +1,7 @@
 from bottle import Bottle, request
 from .base_controller import BaseController
 from services.user_service import UserService
+from services.relationship import delete_relationship
 
 class UserController(BaseController):
     def __init__(self, app):
@@ -63,6 +64,7 @@ class UserController(BaseController):
 
 
     def delete_user(self, user_id):
+        delete_relationship(user_id)
         self.user_service.delete_user(user_id)
         self.redirect('/users')
 

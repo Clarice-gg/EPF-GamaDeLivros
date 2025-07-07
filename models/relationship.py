@@ -37,3 +37,9 @@ def livros_do_usuario(user_id):
 
 def usuarios_do_livro(book_id):
     return [r['user_id'] for r in carregar_relacionamentos() if r['book_id'] == book_id]
+
+
+def delete_relationship(user_id: int):
+    dados = carregar_relacionamentos()
+    dados = [u for u in dados if u.id != user_id]
+    salvar_relacionamentos(dados)

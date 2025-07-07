@@ -2,6 +2,7 @@ import json
 import os
 from dataclasses import dataclass, asdict
 from typing import List
+from models.relationship import delete_relationship
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 
@@ -83,6 +84,7 @@ class UserModel:
 
     def delete_user(self, user_id: int):
         self.users = [u for u in self.users if u.id != user_id]
+        delete_relationship(user_id)
         self._save()
 
     def get_user_name(self, user_name: str):

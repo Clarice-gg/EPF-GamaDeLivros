@@ -5,6 +5,7 @@ from models.relationship import (registrar_escolha_livro, remover_livro_usuario,
 from models.livros import carregar_livros
 from models.user import UserModel
 from services.user_service import UserService
+from controllers.user_controller import UserController
 
 
 class LivroController(BaseController):
@@ -13,6 +14,8 @@ class LivroController(BaseController):
 
         self.setup_routes()
         self.book_service = LivroService()
+        self.user_service = UserService()
+        self.user_controller = UserController(app)
 
 
     # Rotas Livros
@@ -70,17 +73,21 @@ class LivroController(BaseController):
                         livros_escolhidos = livros_escolhidos,
                         livros_disponiveis = livros_disponiveis,
                         action=f"/users/{user_id}/books")
-    
+
 
     def escolher_livro(self, user_id, book_id):
         registrar_escolha_livro(user_id, book_id)
-        #user = self.user_service.get_by_id(user_id)
-        #self.user_service.edit_user_books_add(user)
+        user = self.user_service.get_by_id(user_id)
+        self.user_service.edit_user_books_add(user)
         self.redirect(f'/users/{user_id}/books')
+        self.user_controller.list_users()
 
     def remover_livro(self, user_id, book_id):
         remover_livro_usuario(user_id, book_id)
+        user = self.user_service.get_by_id(user_id)
+        self.user_service.edit_user_books_remove(user)
         self. redirect(f'/users/{user_id}/books')
+        self.user_controller.list_users()
 
 
 book_routes = Bottle()

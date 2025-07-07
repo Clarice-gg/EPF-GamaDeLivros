@@ -1,86 +1,88 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Gama de livros</title>
-    <!-- CSS para o tema -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
-
-    <!-- JS da biblioteca -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-
-    <!-- Suporte a linguagens específicas (Python e HTML) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/xml.min.js"></script>
-
-    <!-- Ativa o realce automaticamente -->
-    <script>hljs.highlightAll();</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gama de Livros</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background: #f9f9f9;
-            color: #333;
+        .hero {
+            text-align: center;
+            padding: 40px 0;
         }
-        h1, h2 {
-            color:rgb(30, 31, 32);
-        }
-        button {
-            background-color:rgb(92, 65, 38)
-        }
-        section {
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
             margin-bottom: 20px;
+            color: var(--accent-color);
         }
-        .comment {
-            background-color: #f8f8f8;
-            padding: 10px;
-            border-bottom: 4px solid rgb(92, 65, 38);
-            margin-bottom: 10px;
-            font-style: italic;
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: var(--dark-color);
+        }
+        
+        .welcome-message {
+            font-size: 1.3rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--dark-color);
+            font-weight: 500;
+        }
+        
+        .access-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--dark-color);
+            font-size: 1.4rem;
+            position: relative;
+        }
+        
+        .access-title:after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--accent-color);
+            margin: 15px auto 0;
         }
     </style>
 </head>
-<!--AINDA TEM QUE CENTRALIZAR OS BOTÕES-->
 
 <body>
-<h1 style="text-align: center;">Gama de livros</h1>
-<div class="comment"></div>
-
-<section>
-    <div class="section-header" style="text-align: center;">
-        <h1 class="section-title"></i>Seja bem-vindo(a) ao Gama de livros!</h1>
+    <div class="container">
+        <div class="hero">
+            <h1>Gama de Livros</h1>
+            <p>Sua biblioteca para encontrar um universo de conhecimento e histórias fascinantes</p>
+        </div>
+        
+        <div class="welcome-message">
+            Seja bem-vindo(a) ao Gama de Livros!
+        </div>
+        
+        <div class="access-title">
+            Como gostaria de acessar a biblioteca?
+        </div>
+        
+        <div class="access-cards">
+            <div class="access-card">
+                <h3>Usuário</h3>
+                <a href="/users" class="btn">Acessar</a>
+            </div>
+            
+            <div class="access-card">
+                <h3>Administrador</h3>
+                <a href="/books" class="btn btn-outline">Acessar</a>
+            </div>
+        </div>
     </div>
-
-    <div class="section-header" style="text-align: center;">
-        <h4>Como gostaria de acessar a biblioteca?</h4>
-    </div>
-
-    <div class="table-container" style="padding-left: 585px; padding-top: 20px;">
-        <table class="styled-table">
-
-            <thead>
-                <tr>
-                    <th style="font-size: 20px;">Usuário</th>
-                    <th style="padding-left: 50px; font-size: 20px;">Administrador</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                
-                <tr>
-                    <td style="padding: 10px; text-align: center;">
-                        <a href="/users">
-                            <button style="color: white;">Acessar</button>
-                        </a>
-                    </td>
-                    <td style="padding: 10px; padding-left:50px; text-align: center;">
-                        <a href="/books">
-                            <button style="color: white;">Acessar</button>
-                        </a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</section>
 </body>
+</html>
+
+
+

@@ -1,27 +1,25 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema Bottle - {{title or 'Sistema'}}</title>
+    <title>Gama de Livros - {{title or 'Sistema'}}</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <style>
-    body {
-        background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-    }
-</style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
-    <div class="container" style="max-width: fit-content; margin-top: 30px; margin-bottom: 40px; margin-align: center;">
+    <div class="container">
         {{!base}}  <!-- O conteúdo das páginas filhas virá aqui -->
     </div>
 
-    <footer>
-        <p class ="textofinal" style="text-align: center; color: white;">&copy; 2025, Meu Projeto. Todos os direitos reservados.</p>
+    <footer class="footer">
+        <p>&copy; 2025 Gama de Livros. Todos os direitos reservados.</p>
+        <p class="textofinal">Desenvolvido com amor para amantes de livros</p>
     </footer>
 
     <!-- Scripts JS no final do body -->

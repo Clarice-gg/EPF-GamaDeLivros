@@ -4,12 +4,17 @@
   --secondary-color: #2980b9;
   --danger-color: #e74c3c;
   --success-color: #2ecc71;
-  --text-color: #333;
+  --text-color: #ffffff;
   --light-gray: #f5f5f5;
   --border-color: #ddd;
   --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.textofinal {
+  color: #ffffff;
+  font-size: 14px;
+  margin-top: 20px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -17,12 +22,20 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: #f9f9f9;
-  padding: 0;
+  background: 
+    /* Gradiente escuro + imagem de fallback */
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') 
+    center/cover no-repeat fixed !important;
+  min-height: 100vh;
   margin: 0;
+}
+
+
+body * {
+  position: static !important;
+  opacity: 1 !important;
+  z-index: auto !important;
 }
 
 /* Layout */

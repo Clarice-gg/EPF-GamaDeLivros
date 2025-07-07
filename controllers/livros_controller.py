@@ -77,15 +77,15 @@ class LivroController(BaseController):
 
     def escolher_livro(self, user_id, book_id):
         registrar_escolha_livro(user_id, book_id)
-        user = self.user_service.get_by_id(user_id)
-        self.user_service.edit_user_books_add(user)
+        #user = self.user_service.get_by_id(user_id)
+        self.user_service.add_book_to_user(user_id, book_id)
         self.redirect(f'/users/{user_id}/books')
         self.user_controller.list_users()
 
     def remover_livro(self, user_id, book_id):
         remover_livro_usuario(user_id, book_id)
-        user = self.user_service.get_by_id(user_id)
-        self.user_service.edit_user_books_remove(user)
+        #user = self.user_service.get_by_id(user_id)
+        self.user_service.remove_book_from_user(user_id, book_id)
         self. redirect(f'/users/{user_id}/books')
         self.user_controller.list_users()
 

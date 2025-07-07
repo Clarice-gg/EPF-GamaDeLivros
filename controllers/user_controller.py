@@ -21,7 +21,13 @@ class UserController(BaseController):
 
     def list_users(self):
         users = self.user_service.get_all()
-        return self.render('users', users=users)
+        # Atualiza a contagem para cada usuário
+        updated_users = []
+        for user in users:
+            updated_users.append(
+                self.user_service.get_user_with_updated_books(user.id) or user
+            )
+        return self.render('users', users=updated_users)
 
 
     def add_user(self):
@@ -71,6 +77,7 @@ class UserController(BaseController):
             # POST - salvar edição
             self.user_service.edit_user(user)
             self.user_service.edit_user_books_add(user)
+            self.list_users()
             self.redirect('/users')
 
 

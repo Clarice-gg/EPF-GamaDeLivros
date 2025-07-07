@@ -12,5 +12,12 @@
         "author": "outra pessoa",
         "pages": "95",
         "stock": "30"
+    },
+    {
+        "id": 3,
+        "name": "livro 3",
+        "author": "alguem ai",
+        "pages": "80",
+        "stock": "15"
     }
 ]

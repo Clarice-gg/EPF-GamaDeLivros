@@ -1,5 +1,7 @@
 from bottle import request
 from models.user import UserModel, User
+from models.relationship import livros_do_usuario, registrar_escolha_livro,remover_livro_usuario
+
 
 class UserService:
     def __init__(self):
@@ -20,6 +22,7 @@ class UserService:
 
         user = User(id=new_id, name=name, email=email, birthdate=birthdate, books=0)
         self.user_model.add_user(user)
+        self._sync_user_books(new_id)
 
 
     def get_by_id(self, user_id):
@@ -51,3 +54,24 @@ class UserService:
     def edit_user_books_remove(self, user):
         user.books -= 1
         self.user_model.update_user(user)
+
+    def _sync_user_books(self, user_id: int):
+        user = self.user_model.get_by_id(user_id)
+        if user:
+            user.books = len(livros_do_usuario(user_id))
+            self.user_model.update_user(user)
+    
+    def add_book_to_user(self, user_id: int, book_id: int):
+        registrar_escolha_livro(user_id, book_id)
+        self._sync_user_books(user_id)
+    
+    def remove_book_from_user(self, user_id: int, book_id: int):
+        remover_livro_usuario(user_id, book_id)
+        self._sync_user_books(user_id)
+    
+    def get_user_with_updated_books(self, user_id):
+        user = self.get_by_id(user_id)
+        if user:
+            self._sync_user_books(user_id)
+            return self.get_by_id(user_id) 
+        return None

@@ -1,7 +1,7 @@
 from bottle import Bottle, request, template
 from .base_controller import BaseController
 from services.livros_service import LivroService
-from models.relationship import (registrar_escolha_livro, remover_livro_usuario, livros_do_usuario)
+from services.relationship import (registrar_escolha_livro, remover_livro_usuario, livros_do_usuario)
 from models.livros import carregar_livros
 from models.user import UserModel
 from services.user_service import UserService

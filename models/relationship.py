@@ -1,3 +1,6 @@
+
+ # DESCONSIDERAR ESSE ARQUIVO (UTILIZA PELOS SERVICES)
+
 import json
 import os
 

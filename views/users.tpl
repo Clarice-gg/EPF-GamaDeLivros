@@ -9,11 +9,7 @@
     </div>
 
     <div class="section-header" style="text-align: center;">
-        <a href="/books">
-            <button>Acessar lista de livros</button>
-        </a>
-
-        <a href="/" style="padding-left: 20px;">
+        <a href="/">
             <button>Voltar ao início</button>
         </a>
     </div>

@@ -42,3 +42,12 @@ class UserService:
 
     def delete_user(self, user_id):
         self.user_model.delete_user(user_id)
+
+    
+    def edit_user_books_add(self, user):
+        user.books = user.books + 1
+        self.user_model.update_user(user)
+
+    def edit_user_books_remove(self, user):
+        user.books -= 1
+        self.user_model.update_user(user)

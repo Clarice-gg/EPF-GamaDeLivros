@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Bottle - {{title or 'Sistema'}}</title>
     <link rel="stylesheet" href="/static/css/style.css" />
+    <style>
+    body {
+        background-image: url("static\img\library.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+</style>
 </head>
 <body>
 

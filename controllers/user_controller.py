@@ -16,6 +16,7 @@ class UserController(BaseController):
         self.app.route('/users/add', method=['GET', 'POST'], callback=self.add_user)
         self.app.route('/users/edit/<user_id:int>', method=['GET', 'POST'], callback=self.edit_user)
         self.app.route('/users/delete/<user_id:int>', method='POST', callback=self.delete_user)
+        self.app.route('/users/<user_id:int>/book', method=['GET, POST'], callback=self)
 
 
     def list_users(self):
@@ -58,6 +59,19 @@ class UserController(BaseController):
     def delete_user(self, user_id):
         self.user_service.delete_user(user_id)
         self.redirect('/users')
+
+    def add_book(self, user_id):
+        user = self.user_service.get_by_id(user_id)
+        if not user:
+            return "Usuário não encontrado"
+
+        if request.method == 'GET':
+            return self.render('livros', user=user, action=f"/users/{user_id}/book")
+        else:
+            # POST - salvar edição
+            self.user_service.edit_user(user)
+            self.user_service.edit_user_books_add(user)
+            self.redirect('/users')
 
 
 user_routes = Bottle()

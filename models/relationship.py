@@ -7,7 +7,7 @@ def carregar_relacionamentos():
     if not os.path.exists(arquivo):
         return []
     with open(arquivo) as f:
-        data = json.load(f) # Tá dando erro pq???
+        data = json.load(f)
         return data
         
 

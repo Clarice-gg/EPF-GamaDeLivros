@@ -87,7 +87,15 @@ class UserModel:
 
     def get_user_name(self, user_name: str):
         return next((u for u in self.users if u.name == user_name), None)
-    
+
+
+    def update_user_books(self, updated_user):
+        for i, user in enumerate(self.users):
+            if user.id == updated_user.id:
+                updated_user.books += 1
+                self.users[i] = updated_user
+                self._save()
+                break
     
 def carregar_users():
     with open('data/users.json') as f:
